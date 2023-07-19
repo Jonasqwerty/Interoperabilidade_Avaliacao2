@@ -20,6 +20,10 @@ def confirmar ():
 def index():
 	return redirect('/listar')
 
+@app.route('/', methods=['GET', 'POST'])
+def listargol();
+	
+
 
 	
 app.run(port=5001, use_reloader=True)
