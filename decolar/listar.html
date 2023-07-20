@@ -1,4 +1,35 @@
-		{% extends "layout.html" %}
-		{% block conteudo %}
-		<h2>Escolha seu Voo</h2>
-		{% endblock %}
+{% extends "layout.html" %}
+{% block conteudo %}
+<h2>Lista </h2>
+<table border="1">
+	<tr>
+		<th> Id      </th>
+		<th> VOO     </th>
+		<th> Origem  </th>
+		<th> Destino </th>
+		<th> Data    </th>
+		
+	</tr>
+	{% for tupla in resultado %}
+		<tr>
+			<td> {{tupla['id']}} </td>
+			<td> {{tupla['voo']}} </td>
+			<td> {{tupla['origem']}} </td>
+			<td> {{tupla['destino']}} </td>
+			<td> {{tupla['datahora']}} </td>
+			
+		<tr>
+	{% endfor %}
+
+	{% for tupla in resultado2 %}
+	<tr>
+		<td> {{tupla['id']}} </td>
+		<td> {{tupla['voo']}} </td>
+		<td> {{tupla['origem']}} </td>
+		<td> {{tupla['destino']}} </td>
+		<td> {{tupla['datahora']}} </td>
+		
+	<tr>
+{% endfor %}
+</table>
+{% endblock %}
