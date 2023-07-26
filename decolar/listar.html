@@ -3,11 +3,12 @@
 <h2>Lista </h2>
 <table border="1">
 	<tr>
-		<th> Id      </th>
-		<th> VOO     </th>
-		<th> Origem  </th>
-		<th> Destino </th>
-		<th> Data    </th>
+		<th> Id         </th>
+		<th> VOO        </th>
+		<th> Origem     </th>
+		<th> Destino    </th>
+		<th> Data       </th>
+		<th> Comprar </th>
 		
 	</tr>
 	{% for tupla in resultado %}
@@ -17,6 +18,7 @@
 			<td> {{tupla['origem']}} </td>
 			<td> {{tupla['destino']}} </td>
 			<td> {{tupla['datahora']}} </td>
+			<td><a href="compra.php"> X </a></td>
 			
 		<tr>
 	{% endfor %}
@@ -28,6 +30,7 @@
 		<td> {{tupla['origem']}} </td>
 		<td> {{tupla['destino']}} </td>
 		<td> {{tupla['datahora']}} </td>
+		<td><a href="compra.php"> X </a></td>
 		
 	<tr>
 {% endfor %}
